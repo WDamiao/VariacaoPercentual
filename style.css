@@ -1,0 +1,106 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    padding-top: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.labelDiv {
+    display: flex;
+    width: 50vw;
+}
+
+label {
+    width: 40%;
+    border-radius: 0 8px 8px 0px;
+    box-shadow: 5px 5px 5px #88888830;
+    text-align: center;
+    font-weight: 600;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+input {
+    padding: 5px;
+    outline: none;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    box-shadow: 5px 5px 5px #88888830;
+
+}
+
+label, .send {
+    padding: 5px;
+    background-color: green;
+    color: white;
+    border: 2px solid green 
+}
+
+
+.send {
+    width: 15%;
+    border: 2px solid green;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 5px 5px 5px #88888830;
+}
+
+.button:hover {
+    background-color: rgb(5, 172, 5);
+    border-color: rgb(5, 172, 5) ;
+    cursor: pointer;
+}
+
+.chart-container {
+    margin: 0 auto;
+    width: 55vw;
+}
+
+.aumentou {
+    background-color: rgb(247, 193, 193);
+    padding: 0.5rem  3rem;
+}
+
+.diminuiu {
+    background-color: greenyellow;
+    padding: 0.5rem 3rem;
+}
+
+@media screen and (max-width: 768px) {
+    .labelDiv{
+        width: 100vw;
+        padding: 0 2rem;
+    }
+
+    .send {
+        width: 30%;
+        padding: 0.8rem;
+        font-size: 1.05rem;
+    }
+
+    .chart-container{
+        width: 100vw;
+    }
+
+    #myChart {
+        width: 100%;
+    }
+}
