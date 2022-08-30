@@ -11,14 +11,17 @@
 </head>
 
 <body>
+    <header>
+        <h1>Variação Percentual</h1>
+    </header>
     <div class="container">
         <div class="labelDiv">
             <input class="valor1" id="valor1" type="number" placeholder="Número de Reclamações">
-            <label for="valor1">Mês anterior</label>
+            <label for="valor1">Anterior</label>
         </div>
         <div class="labelDiv">
             <input class="valor2" id="valor2" type="number" placeholder="Número de Reclamações">
-            <label for="valor2">Mês atual</label>
+            <label for="valor2">Atual</label>
         </div>
         <div class="results">
             <p class="valores"></p>
@@ -26,9 +29,13 @@
             <p class="result"></p>
         </div>
     </div>
-        <div class="chart-container" style="position: relative">
-            <canvas id="myChart"></canvas>
+    <div class="chart-container" style="position: relative">
+        <canvas id="myChart"></canvas>
     </div>
+    <footer>Desenvolvido por Wesley Damião
+        <a href="https://www.linkedin.com/in/wesleydamiao/"> <img class="iconContato" src="./icones/linkedin-svgrepo-com.svg" alt="página do linkedin do desenvolvedor"></a>
+        <a href="https://github.com/WDamiao"><img class="iconContato" src="./icones/github-pngrepo-com.png" alt="página do github do desenvolvedor"></a>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
 </body>
