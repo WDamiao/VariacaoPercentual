@@ -6,8 +6,8 @@ let campo1 = document.querySelector(".valor1")
 
 
 //codigo para salvar com enter
-campo2.addEventListener('keypress', function(e) {
-    if(e.key == 'Enter') {
+campo2.addEventListener('keypress', function (e) {
+    if (e.key == 'Enter') {
         btn.click()
         campo1.focus(limpaCampo())
     }
@@ -32,13 +32,13 @@ btn.addEventListener("click", (e) => {
 function adicionaCampoResultado() {
     let result = (diferenca(getCampo1(), getCampo2()).toFixed(2));
     let textResult = document.querySelector(".result")
-    if(result< 0) {
+    if (result < 0) {
         textResult.classList.remove("aumentou")
         textResult.classList.add("diminuiu")
         textResult.innerHTML = "Redução de " + result + "%"
-    }else if(isNaN(result)){
+    } else if (isNaN(result)) {
         textResult.innerHTML = "Preencha os campos acima"
-    }else{
+    } else {
         textResult.classList.remove("diminuiu")
         textResult.classList.add("aumentou")
         textResult.innerHTML = "Aumento de " + result + "%"
@@ -46,11 +46,11 @@ function adicionaCampoResultado() {
     }
 }
 
-function personalizaResult(){
+function personalizaResult() {
     let result = (diferenca(getCampo1(), getCampo2()).toFixed(2))
-    if(result > 0){
+    if (result > 0) {
         document.querySelector(".result").setAttribute("style", "color:red")
-    }else{
+    } else {
         document.querySelector(".result").setAttribute("style", "color:black")
     }
 }
@@ -84,7 +84,7 @@ Chart.register(ChartDataLabels);
 
 const labels = [
     'Mes Anterior',
-    'Mes Atual',   
+    'Mes Atual',
 ];
 
 const data = {
@@ -94,8 +94,8 @@ const data = {
         backgroundColor: ['orange', 'blue'],
         borderColor: 'rgb(255, 99, 132)',
         data: dados,
-    },{
-        label:['Mês Atual'],
+    }, {
+        label: ['Mês Atual'],
         backgroundColor: ['blue']
     }]
 };
@@ -124,7 +124,7 @@ const myChart = new Chart(
     config
 );
 
-const attGrafico = ()=>{
+const attGrafico = () => {
     myChart.data.datasets[0].data = dados
     myChart.update()
 }
