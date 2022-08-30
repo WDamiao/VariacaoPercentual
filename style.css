@@ -1,8 +1,24 @@
+:root {
+    --amarelo: #f6b930;
+    --azulEscuro: #033a6b;
+}
+
 * { 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+}
+body{
+    position: relative;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    background-color: var(--azulEscuro);
+    color: var(--amarelo);
+    padding: 1rem 0;
 }
 
 .container {
@@ -47,16 +63,16 @@ input {
 }
 
 label, .send {
-    padding: 5px;
-    background-color: green;
-    color: white;
-    border: 2px solid green 
+    padding: 0.5rem;
+    background-color: var(--azulEscuro);
+    color: var(--amarelo);
+    border: 2px solid var(--azulEscuro) 
 }
 
 
 .send {
     width: 15%;
-    border: 2px solid green;
+    border: 2px solid var(--azulEscuro);
     margin-bottom: 1rem;
     border-radius: 8px;
     font-weight: bold;
@@ -72,6 +88,7 @@ label, .send {
 .chart-container {
     margin: 0 auto;
     width: 55vw;
+    background-color: white;
 }
 
 .aumentou {
@@ -82,6 +99,27 @@ label, .send {
 .diminuiu {
     background-color: greenyellow;
     padding: 0.5rem 3rem;
+}
+
+.result {
+    border-radius: 15px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: var(--azulEscuro);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 1rem;
+    color: var(--amarelo);
+}
+
+.iconContato {
+    width: 50px;
 }
 
 @media screen and (max-width: 768px) {
