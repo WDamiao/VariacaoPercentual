@@ -70,12 +70,8 @@ function getCampo2() {
 
 }
 
-function diferenca(valor1, valor2) {
-    if (valor1 < valor2) {
+function diferenca(valor1, valor2) { 
         return ((valor2 - valor1) / valor1) * 100
-    } else {
-        return ((valor2 - valor1) / valor1) * 100
-    }
 }
 
 //-----ChartJS-----------//////////
