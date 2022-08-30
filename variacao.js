@@ -1,7 +1,6 @@
 
 let dados = [];
 let btn = document.querySelector(".send")
-
 let campo2 = document.querySelector(".valor2")
 let campo1 = document.querySelector(".valor1")
 
@@ -25,19 +24,27 @@ btn.addEventListener("click", (e) => {
     getCampo2();
     attValores()
     attGrafico()
-    let result = (diferenca(getCampo1(), getCampo2()).toFixed(2));
-    if(result< 0) {
-        document.querySelector(".result").classList.remove("aumentou")
-        document.querySelector(".result").classList.add("diminuiu")
-        document.querySelector(".result").innerHTML = "Redução de " + result + "%"
-    }else{
-        document.querySelector(".result").classList.remove("diminuiu")
-        document.querySelector(".result").classList.add("aumentou")
-        document.querySelector(".result").innerHTML = "Aumento de " + result + "%"
-    }
+    adicionaCampoResultado()
     personalizaResult()
     campo1.focus()
 })
+
+function adicionaCampoResultado() {
+    let result = (diferenca(getCampo1(), getCampo2()).toFixed(2));
+    let textResult = document.querySelector(".result")
+    if(result< 0) {
+        textResult.classList.remove("aumentou")
+        textResult.classList.add("diminuiu")
+        textResult.innerHTML = "Redução de " + result + "%"
+    }else if(isNaN(result)){
+        textResult.innerHTML = "Preencha os campos acima"
+    }else{
+        textResult.classList.remove("diminuiu")
+        textResult.classList.add("aumentou")
+        textResult.innerHTML = "Aumento de " + result + "%"
+        console.log(result);
+    }
+}
 
 function personalizaResult(){
     let result = (diferenca(getCampo1(), getCampo2()).toFixed(2))
